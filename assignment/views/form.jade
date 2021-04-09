@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .container
+        form(method="post", action="/users", enctype="multipart/form-data")
+            .form-group
+                label Email
+                input.form-control(type="email", name='email', placeholder="Enter Email",required=true)
+             br
+            .form-group
+                label File
+                input.form-control(type="file",name="csvfile", accept=".csv", placeholder="Enter Name",required=true)
+            hr
+            button.btn.btn-primary(type='submit') Submit
